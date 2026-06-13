@@ -1,0 +1,43 @@
+# Calculating the season given month and day as strings
+
+month = input()
+day = int(input())
+month_list = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"]
+
+if (month not in month_list):
+    print("Invalid")
+elif (day > 31) or (day < 1 ):
+    print("Invalid")
+else:
+    if (month == "January") or (month == "February"):
+        print("Winter")
+    elif (month == "October") or (month  == "November"):
+        print("Autumn")
+    elif (month == "July") or (month == "August"):
+        print("Summer")
+    elif (month == "April") or (month == "May"):
+        print("Spring")
+    else:
+        if ((month == "March" in month_list) and (20 <= day <= 31)) or ((month == "June" in month_list) and (1 <= day <= 20)):
+            print("Spring")
+        elif ((month == "June" in month_list) and (21 <= day <= 30)) or ((month == "September" in month_list) and (1 <= day <= 21)):
+            print("Summer")
+        elif ((month == "September" in month_list) and (22 <= day <= 30)) or ((month == "December" in month_list) and (1 <= day <= 20)):
+            print("Autumn")
+        elif ((month == "December" in month_list) and (21 <= day <= 31)) or ((month == "March" in month_list) and (1 <= day <= 19)):
+            print("Winter")
+        else:
+            print("Invalid")
+
+
+
+
+
+
+
+
+
+
+
+
